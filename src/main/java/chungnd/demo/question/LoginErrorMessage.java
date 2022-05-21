@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.questions.Text;
 public class LoginErrorMessage implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
-        return Text.of(LoginPage.ERROR_MESSAGE_CONTAINER).viewedBy(actor).asString();
+        return Text.of(LoginPage.ERROR_MESSAGE_CONTAINER).answeredBy(actor);
     }
 
     public static Question<String> content() {
