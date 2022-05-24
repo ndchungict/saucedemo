@@ -1,4 +1,4 @@
-@Web
+@Web @driver:chrome
 Feature: Login Sauce Demo Website
   As a customer
   I want to order some clothes

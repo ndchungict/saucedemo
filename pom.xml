@@ -135,6 +135,11 @@
             <version>${junit.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.invictum</groupId>
+            <artifactId>serenity-reportportal-integration</artifactId>
+            <version>1.5.7</version>
+        </dependency>
     </dependencies>
 
     <build>
