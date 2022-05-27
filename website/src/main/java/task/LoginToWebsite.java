@@ -1,0 +1,29 @@
+package task;
+
+
+import ability.Authenticate;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import ui.LoginPage;
+
+public class LoginToWebsite implements Task {
+    private Authenticate authenticated(Actor actor) {
+        return Authenticate.as(actor);
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+                Enter.theValue(authenticated(actor).getUsername()).into(LoginPage.USERNAME_FIELD),
+                Enter.theValue(authenticated(actor).getPassword()).into(LoginPage.PASSWORD_FIELD),
+                Click.on(LoginPage.LOGIN_BUTTON)
+        );
+    }
+
+    public static LoginToWebsite withCredentials() {
+        return Tasks.instrumented(LoginToWebsite.class);
+    }
+}
