@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "website/src/test/resources/features/login",
+        features = "src/test/resources/features/login",
         glue = "steps"
 )
 public class LoginTestSuite {

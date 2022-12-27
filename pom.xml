@@ -25,13 +25,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>3.2.5</serenity.version>
-        <serenity.cucumber.version>2.3.6</serenity.cucumber.version>
+        <serenity.version>3.5.1</serenity.version>
+        <serenity.cucumber6.version>2.6.0</serenity.cucumber6.version>
         <cucumber.version>6.9.0</cucumber.version>
         <lombok.version>1.18.24</lombok.version>
-        <log4j.version>2.17.2</log4j.version>
+        <log4j.version>2.19.0</log4j.version>
+        <slf4j.version>2.0.6</slf4j.version>
         <junit.platform.launcher>1.7.0</junit.platform.launcher>
         <junit.version>5.7.0</junit.version>
+        <javaClient.version>8.3.0</javaClient.version>
     </properties>
 
     <dependencies>
@@ -50,12 +52,6 @@
 
         <dependency>
             <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay-webdriver</artifactId>
-            <version>${serenity.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-ensure</artifactId>
             <version>${serenity.version}</version>
         </dependency>
@@ -66,29 +62,11 @@
             <version>${serenity.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-rest-assured</artifactId>
-            <version>${serenity.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay-rest</artifactId>
-            <version>${serenity.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-model</artifactId>
-            <version>${serenity.version}</version>
-        </dependency>
-
         <!--        serenity integration with Cucumber 6-->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber6</artifactId>
-            <version>${serenity.cucumber.version}</version>
+            <version>${serenity.cucumber6.version}</version>
         </dependency>
 
         <dependency>
@@ -101,7 +79,7 @@
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>8.0.0</version>
+            <version>${javaClient.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
@@ -115,7 +93,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.30</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
